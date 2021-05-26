@@ -3,19 +3,17 @@ name: Ubuntu 18
 version: 1
 inputs: {}
 resources:
-  ubuntu:
-    type: Cloud.vSphere.Machine
+  Cloud_Machine_2:
+    type: Cloud.Machine
     properties:
-      image: Ubuntu18
-      flavor: tiny
-      constraints:
-        - tag: 'cloud:vsphere'
+      image: TPL_Ubuntu20.04
+      flavor: RNP-Small-Size
       networks:
         - network: '${resource.vsphere_network.id}'
-          assignment: static
+      name: cloud_machine
   vsphere_network:
     type: Cloud.vSphere.Network
     properties:
       networkType: existing
       constraints:
-        - tag: 'net:vsphere'
+        - tag: RNP-GTI-Net01
