@@ -18,7 +18,7 @@ resources:
       constraints:
         - tag: RNP-GTI-Net01
         
-formatVersion: 1
+formatVersion: 2
 name: Centos7
 version: 1
 inputs: {}
