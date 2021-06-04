@@ -3,7 +3,7 @@ name: Centos7
 version: 1
 inputs: {}
 resources:
-  Cloud_Machine_2:
+  Cloud_Machine_1:
     type: Cloud.Machine
     properties:
       image: TPL_Centos701
