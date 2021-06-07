@@ -1,0 +1,19 @@
+formatVersion: 1
+name: Centos7
+version: 1
+inputs: {}
+resources:
+  Cloud_Machine_1:
+    type: Cloud.Machine
+    properties:
+      image: TPL_Centos701
+      flavor: RNP-Small-Size
+      networks:
+        - network: '${resource.vsphere_network.id}'
+      name: cloud_machine
+  vsphere_network:
+    type: Cloud.vSphere.Network
+    properties:
+      networkType: existing
+      constraints:
+        - tag: RNP-GTI-Net01
